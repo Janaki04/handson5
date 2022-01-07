@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { StudentContext } from "./StudentContext";
-import  TextField  from '@mui/material/TextField';
+
+
 import './style.css'
 
 
@@ -49,16 +50,20 @@ const EditStudent = () => {
         <div className='block'>
             <div className='block1'>
                 <div>
-                    <TextField required type="text" name="Name" id="outlined-helperText" label="Name" value={Name} onChange={handleChange}/>
+                <label>Name:</label>
+                <input id="name" type={'text'} name="name" value={Name} onChange={handleChange}/> 
                 </div>
                 <div>
-                    <TextField required type="number" name="Age" id="outlined-helperText" label="Age" value={Age} onChange={handleChange}/>
+                <label>Age:</label>
+                <input id="Age" type={'number'} name="name" value={Age} onChange={handleChange}/> 
                 </div>
                 <div>
-                    <TextField required type="text" name="Course" id="outlined-helperText" label="Course" value={Course} onChange={handleChange}/>
+                <label>Course:</label>
+                <input id="Course" type={'text'} name="Course" value={Course} onChange={handleChange}/> 
                 </div>
                 <div>
-                    <TextField required type="text" name="Batch" id="outlined-helperText" label="Batch" value={Batch} onChange={handleChange}/>
+                <label>Batch:</label>
+                <input id="Batch" type={'text'} name="Batch" value={Batch} onChange={handleChange}/> 
                 </div>
                 <div>
                     <NavLink to="/students" className='cancel'>Cancel</NavLink>
