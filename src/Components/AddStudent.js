@@ -13,10 +13,18 @@ const AddStudent = () => {
 
     const [students, setStudents] = useContext(StudentContext);
 
-    const handleChange = (event) => {
+    const handleChange1 = (event) => {
         setName(event.target.value);
+    }
+    const handleChange2 = (event) => {
         setAge(event.target.value);
-        setCourse(event.target.value) ; 
+    }
+
+    const handleChange3 = (event) => {
+        setCourse(event.target.value);    
+    }
+
+    const handleChange4 = (event) => {
         setBatch(event.target.value);
     }
 
@@ -28,20 +36,20 @@ const AddStudent = () => {
         <div className='block'>
             <div className='block1'>
             <div>
-                <label>Name:</label>
-                <input id="name" type={'text'} name="name" value={Name} onChange={handleChange}/> 
+                <label className="name">Name:</label>
+                <input className="name1" id="name" type={'text'} name="name" value={Name} onChange={handleChange1}/> 
                 </div>
                 <div>
-                <label>Age:</label>
-                <input id="Age" type={'number'} name="name" value={Age} onChange={handleChange}/> 
+                <label className="age" >Age:</label>
+                <input className="age1" id="Age" type={'number'} name="name" value={Age} onChange={handleChange2}/> 
                 </div>
                 <div>
-                <label>Course:</label>
-                <input id="Course" type={'text'} name="Course" value={Course} onChange={handleChange}/> 
+                <label className="course" >Course:</label>
+                <input className="course1" id="Course" type={'text'} name="Course" value={Course} onChange={handleChange3}/> 
                 </div>
                 <div>
-                <label>Batch:</label>
-                <input id="Batch" type={'text'} name="Batch" value={Batch} onChange={handleChange}/> 
+                <label className="batch">Batch:</label>
+                <input  className="batch1" id="Batch" type={'text'} name="Batch" value={Batch} onChange={handleChange4}/> 
                 </div>
                 <div>
                     <NavLink to="/students" className='cancel'>Cancel</NavLink>

@@ -18,7 +18,7 @@ const Students = () => {
         <div>
             <div className='box2'>
                 <div><h1 className='student'>Students Details</h1></div>
-                <div><NavLink to="/add-student" className='click'>Add Student</NavLink></div>
+                <div><NavLink to="/add-student" className='addclick'>Add Student</NavLink></div>
             </div>
             <div className='box1'>
                 <TableContainer component={Paper}>
